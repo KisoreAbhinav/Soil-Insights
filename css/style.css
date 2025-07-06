@@ -169,7 +169,7 @@ input:checked + .slider:before {
 
 #typewriter {
   position: absolute;
-  top: 650px;
+  top: 670px;
   left: 50%;
   transform: translateX(-50%);
   color: #ffffff;
