@@ -1,4 +1,4 @@
-# Bihar Soil Insights
+# Bihar Soil Insights #2
 
 **Bihar Soil Insights** is a comprehensive hub dedicated to showcasing the rich, diverse soil conditions of Bihar. Created to showcase the lifelong work of *Dr. Chandradeo Choudhary*, a retired Associate Professor and soil scientist with over 40 years of experience, this site serves as a one-stop destination for researchers, students, farmers, and enthusiasts interested in sustainable land use and local soil research.
 
