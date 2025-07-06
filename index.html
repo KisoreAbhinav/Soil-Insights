@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Bihar Soil Insights</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="assets/login-icon.png">
+</head>
+<body>
+  <div class="background-blur"></div>
+  <div class="page-title">
+    <h1>Bihar Soil Insights</h1>
+    <p class="author">— Chandradeo Choudhary</p>
+    <div class="intro">
+      Welcome to a comprehensive hub for Bihar’s soil insights and sustainable land research.<br>
+      Journey through the detailed reports, real-time soil data, and decades of expert knowledge.<br>
+      Uncover the hidden layers of Bihar’s fertile plains and empower your understanding of our agricultural heritage.
+    </div>
+
+  </div>
+  <div class="container">
+    <div class="toggle-area">
+      <label class="switch">
+        <input class="toggle" type="checkbox" id="flip-toggle">
+        <span class="slider"></span>
+        <span class="labels">
+          <span class="label reader-label">Reader</span>
+          <span class="label editor-label">Editor</span>
+        </span>
+      </label>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner" id="flip-card-inner">
+        <div class="flip-card-front">
+          <h2>Reader's Resources</h2>
+          <button class="btn">Review</button>
+        </div>
+        <div class="flip-card-back">
+          <h2>Editor's Engine</h2>
+          <input type="text" placeholder="Editor ID">
+          <input type="password" placeholder="Password">
+          <button class="btn">Access</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ FIXED: poem outside container, positioned absolutely -->
+  <p id="typewriter">
+    In Bihar’s plains, the fertile soil lies deep,
+    Cradling seeds where silent rivers weep.<br>
+    Loamy beds and clay embrace the grain,
+    Harvests rise with every monsoon rain.
+  </p>
+
+  <script>
+    const toggle = document.getElementById('flip-toggle');
+    const flipInner = document.getElementById('flip-card-inner');
+
+    toggle.addEventListener('change', () => {
+      flipInner.classList.toggle('flipped', toggle.checked);
+    });
+
+    // ✅ Typewriter effect
+    const el = document.getElementById("typewriter");
+    const text = el.innerHTML;
+    el.innerHTML = "";
+    let i = 0;
+
+    function type() {
+      if (i < text.length) {
+        if (text.charAt(i) === "<") {
+          // If it's a <br>, skip over it
+          const brClose = text.indexOf(">", i);
+          el.innerHTML += text.substring(i, brClose + 1);
+          i = brClose + 1;
+        } else {
+          el.innerHTML += text.charAt(i);
+          i++;
+        }
+        setTimeout(type, 50);
+      }
+    }
+
+    type();
+  </script>
+</body>
+</html>
